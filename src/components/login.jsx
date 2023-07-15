@@ -15,7 +15,7 @@ function login({socket}) {
     setuser(event.target.value)
   }
   const posting = (users)=>{
-    return axios.post(`https://chat-app-backend-0ahq.onrender.com/${users.url}`,{name:users.user1}).then(res=>res.data)
+    return axios.post(`https://chat-app-backend-wq1q.onrender.com/${users.url}`,{name:users.user1}).then(res=>res.data)
   }
   const checkuser = useMutation({
     mutationKey:["user"],

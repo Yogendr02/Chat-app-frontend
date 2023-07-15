@@ -20,12 +20,12 @@ export default function AlignItemsList({ socket }) {
     })
     const dispatch = useDispatch()
     const userfunc = () => {
-        return axios.get("https://chat-app-backend-0ahq.onrender.com/getall")
+        return axios.get("https://chat-app-backend-wq1q.onrender.com/getall")
             .then(res => res.data
             )
     };
     const friendidfunc = (data) => {
-        return axios.post("https://chat-app-backend-0ahq.onrender.com/postid", data)
+        return axios.post("https://chat-app-backend-wq1q.onrender.com/postid", data)
     };
 
     const user = localStorage.getItem("gooduser")
