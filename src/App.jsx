@@ -3,7 +3,7 @@ import Messagepage  from './pages/messagingpage';
 import LoginandSignup from './pages/loginandsignup';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const socket = io.connect("http://localhost:3001")
+const socket = io.connect("https://chat-app-backend-mpd0.onrender.com/")
 console.log(socket.id)
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 

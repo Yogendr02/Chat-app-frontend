@@ -23,16 +23,16 @@ function message({ socket }) {
     return state.currentuserdetail.touser
   })
   const postfunc = (data) => {
-    return axios.post("https://chat-app-backend-wq1q.onrender.com/postmessage", data)
+    return axios.post("https://chat-app-backend-mpd0.onrender.com/postmessage", data)
   }
   const getfunc = (data) => {
-    return axios.post("https://chat-app-backend-wq1q.onrender.com/getmessage", data).then(res => res.data)
+    return axios.post("https://chat-app-backend-mpd0.onrender.com/getmessage", data).then(res => res.data)
   }
   const getidfunc = (data) => {
-    return axios.post("https://chat-app-backend-wq1q.onrender.com/getid", data).then(res => res.data)
+    return axios.post("https://chat-app-backend-mpd0.onrender.com/getid", data).then(res => res.data)
   }
   const deletefunc = (data)=>{
-    return axios.post("https://chat-app-backend-wq1q.onrender.com/deletemessage", data)
+    return axios.post("https://chat-app-backend-mpd0.onrender.com/deletemessage", data)
   }
   const getid = useMutation({
     mutationFn: getidfunc,
@@ -88,7 +88,7 @@ function message({ socket }) {
     deletemessage.mutateAsync(item)
   }
 
-  socket.on("received", datap => {
+  socket.on("receiveid", datap => {
     setsendingid(datap)
   })
   socket.on("receive", data => {
